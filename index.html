@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Traffic AI - Smart Traffic Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-traffic-light"></i> Namma Traffic AI</h1>
+            <p>Smart Traffic Management for Bangalore</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="vehicle-count">1,245</h3>
+                        <p>Vehicles Detected</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="avg-wait-time">3.2 min</h3>
+                        <p>Average Wait Time</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="traffic-flow">78%</h3>
+                        <p>Traffic Flow Efficiency</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="congestion-level">Medium</h3>
+                        <p>Congestion Level</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="traffic-map">
+            <h2>Real-time Traffic Monitoring</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Interactive Traffic Map</p>
+                    <div class="traffic-signals">
+                        <div class="signal" id="signal-1">
+                            <div class="light red active"></div>
+                            <div class="light yellow"></div>
+                            <div class="light green"></div>
+                            <span>MG Road Junction</span>
+                        </div>
+                        <div class="signal" id="signal-2">
+                            <div class="light red"></div>
+                            <div class="light yellow"></div>
+                            <div class="light green active"></div>
+                            <span>Brigade Road</span>
+                        </div>
+                        <div class="signal" id="signal-3">
+                            <div class="light red"></div>
+                            <div class="light yellow active"></div>
+                            <div class="light green"></div>
+                            <span>Koramangala</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-insights">
+            <h2>AI Predictions & Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3><i class="fas fa-chart-line"></i> Traffic Prediction</h3>
+                    <p>Peak traffic expected at <strong>MG Road</strong> in next 15 minutes. Suggested alternate route via Richmond Road.</p>
+                    <div class="prediction-chart">
+                        <div class="chart-bar" style="height: 30%"></div>
+                        <div class="chart-bar" style="height: 60%"></div>
+                        <div class="chart-bar" style="height: 90%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar" style="height: 40%"></div>
+                    </div>
+                </div>
+                
+                <div class="insight-card">
+                    <h3><i class="fas fa-route"></i> Route Optimization</h3>
+                    <p>AI suggests optimizing signal timing at <strong>Brigade Road</strong> to reduce wait time by 25%.</p>
+                    <div class="optimization-meter">
+                        <div class="meter-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="insight-card">
+                    <h3><i class="fas fa-bell"></i> Alerts</h3>
+                    <div class="alerts-list">
+                        <div class="alert warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Heavy traffic detected at Silk Board
+                        </div>
+                        <div class="alert info">
+                            <i class="fas fa-info-circle"></i>
+                            Signal maintenance scheduled at 2 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls">
+            <h2>Traffic Control Panel</h2>
+            <div class="control-buttons">
+                <button class="btn btn-primary" onclick="optimizeTraffic()">
+                    <i class="fas fa-magic"></i> Auto Optimize
+                </button>
+                <button class="btn btn-secondary" onclick="generateReport()">
+                    <i class="fas fa-file-alt"></i> Generate Report
+                </button>
+                <button class="btn btn-success" onclick="startSimulation()">
+                    <i class="fas fa-play"></i> Start Simulation
+                </button>
+                <button class="btn btn-warning" onclick="emergencyMode()">
+                    <i class="fas fa-ambulance"></i> Emergency Mode
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Namma Traffic AI. Smart traffic management for a better Bangalore.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
